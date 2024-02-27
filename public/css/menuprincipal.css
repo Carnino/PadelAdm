@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-image: url('/public/img/pelota-tenis.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px); /* Ajusta el valor para cambiar la intensidad del desenfoque */
+}
+
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border: 3px solid #225bb0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: rgb(36, 33, 33);
+}
+
+.card h2 {
+  color:#ffffff
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #225bb0;
+}

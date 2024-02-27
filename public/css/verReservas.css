@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-image: url('/public/img/pelota-tenis.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
+
+
+h2, .form-label {
+    color: white;
+}
+
+.form-control {
+    border: solid 2px black;
+    width: 300px;
+    margin: 0 auto; /* Establece los márgenes laterales automáticos para centrar */
+    display: block; /* Asegura que sea un elemento de bloque para aplicar márgenes automáticos */
+}
+
+
+h2 {
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fechaReserva {
+    margin-bottom: 10px;
+}
+
+#consultarBtn {
+    margin-bottom: 20px;
+    border: solid 2px black;
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 10px;
+    border: solid 2px black;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #343a40;
+    color: #ffffff;
+    z-index: 1;
+}
+
+th, td {
+    padding: 10px;
+    height: auto;
+    text-align: center;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+}
+
+td {
+    background-color: #495057;
+    color: white;
+}
+
+.eliminarBtn {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    vertical-align: middle;
+}
+
+.mt-3 {
+    margin-top: 0px!important;
+    margin-bottom: 0px;
+}
+
+p {
+    color: #ffffff; /* Puedes reemplazar "#ff0000" con el código de color que desees */
+}

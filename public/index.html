@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <!-- Enlaza a las bibliotecas de Firebase mediante CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <!-- Agrega aquí los enlaces a los estilos o bibliotecas adicionales que quieras usar -->
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="shortcut icon" href="/public/img/logo.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <form class="box" id="login-form">
+      <h4>Iniciar Sesion</h4>
+      <h5>Ingresa tu mail y contraseña</h5>
+      <input type="text" name="email" placeholder="Email" autocomplete="off" />
+      <div class="password-input">
+        <input type="password" name="password" placeholder="Password" id="pwd" autocomplete="off" />
+        <button type="button" id="mostrarPass" class="password-toggle-btn">
+          <i class="fas fa-eye-slash" id="eye-icon"></i>
+        </button>
+      </div>
+      <button id="botoninicio" class="btn1" type="submit">Iniciar Sesión</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 - Code.Gym.Team - Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module">
+    const mostrarPassButton = document.getElementById("mostrarPass");
+    const passwordInput = document.getElementById("pwd");
+    const eyeIcon = document.getElementById("eye-icon");
+
+    mostrarPassButton.addEventListener("click", function() {
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.classList.remove("fa-eye-slash"); // Remover la clase de ojo cerrado
+            eyeIcon.classList.add("fa-eye"); // Agregar la clase de ojo abierto
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye"); // Remover la clase de ojo abierto
+                eyeIcon.classList.add("fa-eye-slash"); // Agregar la clase de ojo cerrado
+            }
+    });
+
+    // Referencia al formulario de inicio de sesión
+    const loginForm = document.getElementById("login-form");
+
+    // Manejador del envío del formulario
+    loginForm.addEventListener("submit", async (event) => {
+        document.getElementById("botoninicio").textContent = "Iniciando...";
+        event.preventDefault(); 
+
+        const email = loginForm.email.value;
+        const password = loginForm.password.value;
+
+        try {
+            // Verificar si el email y la contraseña coinciden
+            if (email === "code.gym.team@gmail.com" && password === "mariorinaldi1") {
+                // Redirigir a menuprincipal.html
+                loginForm.setAttribute("action", "/public/html/menuprincipal.html");
+                loginForm.submit();
+            } else {
+                // Mostrar un mensaje de error si las credenciales son incorrectas
+                throw new Error("Credenciales incorrectas");
+            }
+        } catch (error) {
+            alert("Error, los datos ingresados son incorrectos");
+            console.error("Error al iniciar sesión:", error.message);
+            document.getElementById("botoninicio").textContent = "Iniciar Sesión";
+            location.reload();
+        }
+    });
+  </script>
+</body>
+</html>
