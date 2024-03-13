@@ -1,11 +1,17 @@
 {
   "hosting": {
-    "site": "codepadel-adm",
+    "site": "code-padel-martin",
     "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }

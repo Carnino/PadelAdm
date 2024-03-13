@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+body {
+    padding-top:20px;
+    background-image: url('../img//pelota-tenis.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px); /* Ajusta el valor para cambiar la intensidad del desenfoque */
+}
+
+.custom-container {
+    border: 4px solid #555555; /* Color del borde */
+    border-radius: 10px; /* Radio de borde */
+    width: 400px;
+    }
+
+.custom-btn {
+    font-size: 1rem; /* Tamaño del texto de los botones */
+    padding: 15px 30px; /* Espaciado interno de los botones */
+    margin-left: 20px;
+    margin-right: 20px;
+    border: solid 2px black;
+    transition: box-shadow 0.2s ease;
+    }
+
+.custom-btn:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+
+.btn-container {
+    text-align: center;
+  }
+
+.logo-container {
+    text-align: center; /* Centra horizontalmente */;
+
+}
+
+.logo-container img {
+    max-width: 150px; /* Establece el ancho máximo al 100% del contenedor */
+    max-height: 150px; /* Establece la altura máxima al 100% del contenedor */
+    width: auto; /* Establece el ancho automático */
+    height: auto; /* Establece la altura automática */
+}
+
+
+.menu-title {
+    color: white; /* Color del texto */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-top: 20px;
+}
